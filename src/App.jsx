@@ -30,7 +30,7 @@ function App() {
               neutral: totalNeutral,
               bad: totalBad,
               total: total,
-              positive: positive + ' %'
+              positive: positive + '%'
           };
       });
   };
@@ -42,7 +42,7 @@ function App() {
     const hasFeedback = feedback.good > 0 || feedback.neutral > 0 || feedback.bad > 0;
 
     return (
-        <>
+        <div className='wrapperMain'>
             <Description />
             <Options 
                 onFeedbackChange={handleFeedbackChange} 
@@ -50,7 +50,8 @@ function App() {
                 showReset={hasFeedback} 
             />
             {hasFeedback && <Feedback {...feedback} />}
-        </>
+            {!hasFeedback && <p className='feedbackList'>No feetback yet</p>}
+        </div>
     );
 }
 

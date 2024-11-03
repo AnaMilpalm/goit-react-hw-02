@@ -1,0 +1,13 @@
+.mainTitle {
+    color: #000;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #000;
+    margin-bottom: 15px;
+    transition: min-height 300ms ease; /* Додайте анімацію для висоти */
+  
+}
